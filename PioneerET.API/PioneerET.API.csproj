@@ -188,6 +188,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AuthorsController.cs" />
     <Compile Include="Controllers\BooksController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\PioneerETAuthorizationServerProvider.cs" />
     <Compile Include="Startup.cs" />
@@ -210,6 +211,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\PioneerET.Data\PioneerET.Data.csproj">
+      <Project>{6d5f6be5-8305-43c1-b31d-6bab6bcd9205}</Project>
+      <Name>PioneerET.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PioneerET.LDAP\PioneerET.LDAP.csproj">
       <Project>{36f12c4b-0fc9-4f2d-85bb-cd5d69eae54b}</Project>
       <Name>PioneerET.LDAP</Name>

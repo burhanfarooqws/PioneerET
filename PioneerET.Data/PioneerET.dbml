@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="pioneeret" EntityNamespace="PioneerET" ContextNamespace="PioneerET" Class="PioneerETDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.PioneerET_Assigned_Equipment" Member="PioneerET_Assigned_Equipment">
+    <Type Name="PioneerET_Assigned_Equipment">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fleet_Title" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Unit_Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tractor_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Trailer_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Equipments_Inventory" Member="PioneerET_Equipments_Inventory">
+    <Type Name="PioneerET_Equipments_Inventory">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Equipment_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Unit_Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Wet_Kit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fluid_End" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CNG" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Iron_Maintenance" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ETech_Maintenance" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Operational_Testing" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Activation" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Fleets_Management" Member="PioneerET_Fleets_Management">
+    <Type Name="PioneerET_Fleets_Management">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fleet_Title" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Supervisor" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Frac_Locations" Member="PioneerET_Frac_Locations">
+    <Type Name="PioneerET_Frac_Locations">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(500) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Frac_Locations_Headcount" Member="PioneerET_Frac_Locations_Headcount">
+    <Type Name="PioneerET_Frac_Locations_Headcount">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HeadCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Location" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HeadCount_Timestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Frac_Locations_Well" Member="PioneerET_Frac_Locations_Well">
+    <Type Name="PioneerET_Frac_Locations_Well">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LocationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Team_Name" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Well_Identifier" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Planned_Frac_Stages" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Completed_Frac_Stages" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Projected_Frac_Start_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Frac_End_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Frac_Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sand_Grade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Volume" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Locations_Fleets" Member="PioneerET_Locations_Fleets">
+    <Type Name="PioneerET_Locations_Fleets">
+      <Column Name="Title" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Trailer_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tractor_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tractor_Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Trailer_Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Locations_Silos" Member="PioneerET_Locations_Silos">
+    <Type Name="PioneerET_Locations_Silos">
+      <Column Name="Title" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Trailer_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tractor_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tractor_Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Trailer_Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Notes" Member="PioneerET_Notes">
+    <Type Name="PioneerET_Notes">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EquipmentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PioneerUserIdentifier" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Operation_Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notes_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Notifications" Member="PioneerET_Notifications">
+    <Type Name="PioneerET_Notifications">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sub_Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Timestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Notifications_Recipients" Member="PioneerET_Notifications_Recipients">
+    <Type Name="PioneerET_Notifications_Recipients">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notification_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="User_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Send_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Read_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Options" Member="PioneerET_Options">
+    <Type Name="PioneerET_Options">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(500) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Out_For_Repair" Member="PioneerET_Out_For_Repair">
+    <Type Name="PioneerET_Out_For_Repair">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OFR_Location" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Trailer_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tractor_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Unit_Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Additional_Notes" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="In_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Out_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Repair_Locations" Member="PioneerET_Repair_Locations">
+    <Type Name="PioneerET_Repair_Locations">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_SiloSets" Member="PioneerET_SiloSets">
+    <Type Name="PioneerET_SiloSets">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Unit_Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tractor_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Trailer_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Filter_1_Change_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Filter_2_Change_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Filter_3_Change_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Standards" Member="PioneerET_Standards">
+    <Type Name="PioneerET_Standards">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Default_Value" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Value" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Is_Editable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Team_Management" Member="PioneerET_Team_Management">
+    <Type Name="PioneerET_Team_Management">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PioneerUserIdentifier" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Lead" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_UserRole_LDAPGroup" Member="PioneerET_UserRole_LDAPGroup">
+    <Type Name="PioneerET_UserRole_LDAPGroup">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Group" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Users_from_LDAP" Member="PioneerET_Users_from_LDAP">
+    <Type Name="PioneerET_Users_from_LDAP">
+      <Column Name="PioneerUserIdentifier" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EmailAddress" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="isActive" Member="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="MemberOfGroups" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PioneerET_Yard" Member="PioneerET_Yard">
+    <Type Name="PioneerET_Yard">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tractor_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tractor_Maintenance" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Trailer_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Trailer_Fluid_End" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Trailer_Maintenance" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Trailer_Iron" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Trailer_ETech" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Trailer_Operational_Testing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="In_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Out_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
