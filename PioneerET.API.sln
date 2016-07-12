@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerET.API", "PioneerET.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerET.LDAP", "PioneerET.LDAP\PioneerET.LDAP.csproj", "{36F12C4B-0FC9-4F2D-85BB-CD5D69EAE54B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerET.Models", "PioneerET.Models\PioneerET.Models.csproj", "{6FCB74E3-A10B-4243-99A0-2EF47FEDFE56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{36F12C4B-0FC9-4F2D-85BB-CD5D69EAE54B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36F12C4B-0FC9-4F2D-85BB-CD5D69EAE54B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36F12C4B-0FC9-4F2D-85BB-CD5D69EAE54B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FCB74E3-A10B-4243-99A0-2EF47FEDFE56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FCB74E3-A10B-4243-99A0-2EF47FEDFE56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FCB74E3-A10B-4243-99A0-2EF47FEDFE56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FCB74E3-A10B-4243-99A0-2EF47FEDFE56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

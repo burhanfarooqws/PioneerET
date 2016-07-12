@@ -188,8 +188,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AuthorsController.cs" />
     <Compile Include="Controllers\BooksController.cs" />
-    <Compile Include="Models\Authors.cs" />
-    <Compile Include="Models\Books.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\PioneerETAuthorizationServerProvider.cs" />
     <Compile Include="Startup.cs" />
@@ -199,6 +197,10 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="App_Data\MockData\ldapusers.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\MockData\usersdata.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -206,8 +208,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <ProjectReference Include="..\PioneerET.LDAP\PioneerET.LDAP.csproj">
+      <Project>{36f12c4b-0fc9-4f2d-85bb-cd5d69eae54b}</Project>
+      <Name>PioneerET.LDAP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PioneerET.Models\PioneerET.Models.csproj">
+      <Project>{6fcb74e3-a10b-4243-99a0-2ef47fedfe56}</Project>
+      <Name>PioneerET.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,137 @@
+﻿{
+  "ldapusers":[
+    {
+      "GetPersonResponse": {
+        "PersonDetails": [
+          {
+            "FirstName": "Munish",
+            "LastName": "Dadwal",
+            "PioneerUserIdentifier": "dadwa305",
+            "EmailAddress": "munish.dadwal1@pxd.com",
+            "MemberOfGroups": {
+              "GroupName": [
+                "AG-MobileAppDevelopment",
+                "SP-ERP-Fusionland",
+                "dl-ERP-Tech-Integration",
+                "G-AzureUsers",
+                "G-HSE-MobileTest-Members",
+                "SP-ERP-TECH",
+                "SP-Tank-Battery-Sensor-Readings-Members",
+                "G-LC-CFA USERS-RW",
+                "SP-MobilityApp-Technical",
+                "grp-tib-ems-qa-usr",
+                "grp-tib-ems-dev-usr",
+                "SP-BISuccess-Members",
+                "SP-IntegrationServices-Members",
+                "grp-Tibco-Dev",
+                "grp-Tibco-Admin",
+                "dl-Las Colinas Cost Center Integration",
+                "CLY-IT-BASE-USERS",
+                "SP-EnterpriseIntegration-Contractor",
+                "SP-PXD-Contractors",
+                "dl-RSA Token",
+                "G-CIS-Users",
+                "G-CTX-RDP",
+                "McAfee Check",
+                "USA-All Contractors"
+              ]
+            },
+            "isManager": false,
+            "ManagerFirstName": "John",
+            "ManagerLastName": "Kohlschein",
+            "ManagerPioneerUserIdentifier": "Kohlschj",
+            "ManagerEmailAddress": "John.Kohlschein@pxd.com"
+          }
+        ]
+      }
+    },
+    {
+      "GetPersonResponse": {
+        "PersonDetails": [
+          {
+            "FirstName": "Munish",
+            "LastName": "Dadwal",
+            "PioneerUserIdentifier": "dadwa305",
+            "EmailAddress": "munish.dadwal2@pxd.com",
+            "MemberOfGroups": {
+              "GroupName": [
+                "AG-MobileAppDevelopment",
+                "SP-ERP-Fusionland",
+                "dl-ERP-Tech-Integration",
+                "G-AzureUsers",
+                "G-HSE-MobileTest-Members",
+                "SP-ERP-TECH",
+                "SP-Tank-Battery-Sensor-Readings-Members",
+                "G-LC-CFA USERS-RW",
+                "SP-MobilityApp-Technical",
+                "grp-tib-ems-qa-usr",
+                "grp-tib-ems-dev-usr",
+                "SP-BISuccess-Members",
+                "SP-IntegrationServices-Members",
+                "grp-Tibco-Dev",
+                "grp-Tibco-Admin",
+                "dl-Las Colinas Cost Center Integration",
+                "CLY-IT-BASE-USERS",
+                "SP-EnterpriseIntegration-Contractor",
+                "SP-PXD-Contractors",
+                "dl-RSA Token",
+                "G-CIS-Users",
+                "G-CTX-RDP",
+                "McAfee Check",
+                "USA-All Contractors"
+              ]
+            },
+            "isManager": false,
+            "ManagerFirstName": "John",
+            "ManagerLastName": "Kohlschein",
+            "ManagerPioneerUserIdentifier": "Kohlschj",
+            "ManagerEmailAddress": "John.Kohlschein@pxd.com"
+          }
+        ]
+      }
+    },
+    {
+	"GetPersonResponse": {
+		"PersonDetails": [{
+			"FirstName": "Munish",
+			"LastName": "Dadwal",
+			"PioneerUserIdentifier": "dadwa305",
+			"EmailAddress": "munish.dadwal3@pxd.com",
+			"MemberOfGroups": {
+				"GroupName": [
+					"AG-MobileAppDevelopment",
+					"SP-ERP-Fusionland",
+					"dl-ERP-Tech-Integration",
+					"G-AzureUsers",
+					"G-HSE-MobileTest-Members",
+					"SP-ERP-TECH",
+					"SP-Tank-Battery-Sensor-Readings-Members",
+					"G-LC-CFA USERS-RW",
+					"SP-MobilityApp-Technical",
+					"grp-tib-ems-qa-usr",
+					"grp-tib-ems-dev-usr",
+					"SP-BISuccess-Members",
+					"SP-IntegrationServices-Members",
+					"grp-Tibco-Dev",
+					"grp-Tibco-Admin",
+					"dl-Las Colinas Cost Center Integration",
+					"CLY-IT-BASE-USERS",
+					"SP-EnterpriseIntegration-Contractor",
+					"SP-PXD-Contractors",
+					"dl-RSA Token",
+					"G-CIS-Users",
+					"G-CTX-RDP",
+					"McAfee Check",
+					"USA-All Contractors"
+				]
+			},
+			"isManager": false,
+			"ManagerFirstName": "John",
+			"ManagerLastName": "Kohlschein",
+			"ManagerPioneerUserIdentifier": "Kohlschj",
+			"ManagerEmailAddress": "John.Kohlschein@pxd.com"
+		}]
+	}
+}
+  ]
+}
